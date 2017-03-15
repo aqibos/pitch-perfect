@@ -21,7 +21,6 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
   }
 
   @IBAction func recordAudio(_ sender: Any) {
-    recordingLabel.text = "Recording in Progress!"
     setButtonsState(isRecording: true);
 
     // Get document directory for storing audio and combine with file name
@@ -47,7 +46,6 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
   }
 
   @IBAction func stopRecording(_ sender: Any) {
-    recordingLabel.text = "Tap to Record!"
     setButtonsState(isRecording: false);
 
     audioRecorder.stop()
@@ -62,6 +60,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
   }
 
   func setButtonsState(isRecording: Bool) -> Void {
+    recordingLabel.text =
+      isRecording ? "Recording in Progress" : "Tap to Record"
     recordButton.isEnabled = !isRecording;
     stopButton.isEnabled = isRecording;
   }
