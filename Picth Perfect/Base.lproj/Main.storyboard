@@ -181,7 +181,6 @@
                         <outlet property="snailButton" destination="pEe-DK-KZ9" id="qIR-TS-n76"/>
                         <outlet property="stopButton" destination="Nb6-Et-tKo" id="Riv-QX-diV"/>
                         <outlet property="vaderButton" destination="mwa-Bd-WWd" id="xDk-WH-sWg"/>
-                        <outlet property="view" destination="iQL-gX-p6n" id="xYW-we-zHN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYG-t6-w8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
