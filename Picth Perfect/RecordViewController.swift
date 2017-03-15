@@ -62,8 +62,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
   func setButtonsState(isRecording: Bool) -> Void {
     recordingLabel.text =
       isRecording ? "Recording in Progress" : "Tap to Record"
-    recordButton.isEnabled = !isRecording;
-    stopButton.isEnabled = isRecording;
+    recordButton.isEnabled = !isRecording
+    stopButton.isEnabled = isRecording
   }
 
   // Set up (or "prepare") PlaybackViewController before segue is performed
@@ -71,7 +71,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     if segue.identifier == "toPlayback" {
       let playbackViewController = segue.destination as! PlaybackViewController
       let recordedAudioURL = sender as! URL
-      playbackViewController.recordedAudioURL = recordedAudioURL;
+      playbackViewController.recordedAudioURL = recordedAudioURL
     }
   }
 
