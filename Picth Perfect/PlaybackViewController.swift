@@ -19,6 +19,7 @@ class PlaybackViewController: UIViewController {
   @IBOutlet weak var reverbButton: UIButton!
   @IBOutlet weak var stopButton: UIButton!
 
+
   var recordedAudioURL: URL!
   var audioFile: AVAudioFile!
   var audioEngine: AVAudioEngine!
@@ -31,6 +32,7 @@ class PlaybackViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupAudio()
+    setupButtons()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -53,5 +55,15 @@ class PlaybackViewController: UIViewController {
 
   @IBAction func stopSoundForButton(_ sender: UIButton) {
     stopAudio()
+  }
+
+  func setupButtons() {
+    snailButton.imageView?.contentMode = .scaleAspectFit
+    chipmunkButton.imageView?.contentMode = .scaleAspectFit
+    rabbitButton.imageView?.contentMode = .scaleAspectFit
+    vaderButton.imageView?.contentMode = .scaleAspectFit
+    echoButton.imageView?.contentMode = .scaleAspectFit
+    reverbButton.imageView?.contentMode = .scaleAspectFit
+    stopButton.imageView?.contentMode = .scaleAspectFit
   }
 }
